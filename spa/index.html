@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minha Loja SPA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+
+            <span class="navbar-brand" onclick="navegar('tela-home')">Floripa's Shop</span>
+
+            <!-- Botão para menu responsivo -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Itens do Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <li class="nav-item"><button class="nav-link" onclick="navegar('tela-vestuario')">Vestuário</button>
+                    </li>
+                    <li class="nav-item"><button class="nav-link"
+                            onclick="navegar('tela-eletronicos')">Eletrônicos</button></li>
+                    <li class="nav-item"><button class="nav-link"
+                            onclick="navegar('tela-eletrodomesticos')">Eletrodomésticos</button></li>
+                    <li class="nav-item"><button class="nav-link" onclick="navegar('tela-contato')">Contato</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4 mt-5 p-4">
+        <h2 class="text-center mb-4">Loja SPA com Bootstrap</h2>
+
+        <div id="tela-home" class="tela row row-cols-1 row-cols-md-3 g-4 show">
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Camiseta', 'imagens/camiseta.jpg', 'Vestuário', '85,00', 'Camiseta de algodão confortável e estilosa, perfeita para o dia a dia.', '4.0', '1250')">
+                <img src="imagens/camiseta.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Camiseta</h5>
+                    <p class="card-text"> R$ 85,00</p>
+
+                </div>
+            </span>
+
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Calça', 'imagens/calca.jpg', 'Vestuário', '150,00', 'Calça jeans de alta qualidade, ideal para o dia a dia.', '4.0', '3320')">
+                <img src="imagens/calca.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Calça</h5>
+                    <p class="card-text"> R$ 150,00</p>
+
+                </div>
+            </span>
+
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Teclado', 'imagens/teclado.jpg', 'Eletrônicos', '100,00', 'Teclado excelente para grandes volumes de trabalho.', '3.0', '530')">
+                <img src="imagens/teclado.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Teclado</h5>
+                    <p class="card-text"> R$ 100,00</p>
+
+                </div>
+            </span>
+
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Smartphone', 'imagens/telefone.jpg', 'Eletrônicos', '1.200,00', 'Smartphone de última geração, com excelente desempenho.', '5.0', '2836')">
+                <img src="imagens/telefone.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Smartphone</h5>
+                    <p class="card-text"> R$ 1.200,00</p>
+
+                </div>
+            </span>
+
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Fogão', 'imagens/fogao.jpg', 'Eletrodomésticos', '850,00', 'Fogão altamente resistente e fácil de limpar.', '3.0', '842')">
+                <img src="imagens/fogao.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Fogão</h5>
+                    <p class="card-text"> R$ 850,00</p>
+
+                </div>
+            </span>
+
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Geladeira', 'imagens/geladeira.jpg', 'Eletrodomésticos', '5.500,00', 'Geladeira de alta capacidade e baixo consumo de energia.', '3.0', '1560')">
+                <img src="imagens/geladeira.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Geladeira</h5>
+                    <p class="card-text"> R$ 5.500,00</p>
+
+                </div>
+            </span>
+        </div>
+
+        <div id="tela-vestuario" class="tela row row-cols-1 row-cols-md-3 g-4 collapse">
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Camiseta', 'imagens/camiseta.jpg', 'Vestuário', '85,00', 'Camiseta de algodão confortável e estilosa, perfeita para o dia a dia.', '4.0', '1250')">
+                <img src="imagens/camiseta.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Camiseta</h5>
+                    <p class="card-text"> R$ 85,00</p>
+
+                </div>
+            </span>
+
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Calça', 'imagens/calca.jpg', 'Vestuário', '150,00', 'Calça jeans confortável e estilosa, perfeita para o dia a dia.', '4.2', '800')">
+                <img src="imagens/calca.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Calça</h5>
+                    <p class="card-text"> R$ 150,00</p>
+
+                </div>
+            </span>
+        </div>
+
+        <div id="tela-eletronicos" class="tela row row-cols-1 row-cols-md-3 g-4 collapse">
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Teclado', 'imagens/teclado.jpg', 'Eletrônicos', '100,00', 'Teclado mecânico com switches de alta qualidade, perfeito para gamers.', '4.5', '300')">
+                <img src="imagens/teclado.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Teclado</h5>
+                    <p class="card-text"> R$ 100,00</p>
+
+                </div>
+            </span>
+
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Smartphone', 'imagens/telefone.jpg', 'Eletrônicos', '1.200,00', 'Smartphone com tela de 6.5 polegadas e câmera de alta qualidade, perfeito para uso diário.', '4.3', '2500')">
+                <img src="imagens/telefone.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Smartphone</h5>
+                    <p class="card-text"> R$ 1.200,00</p>
+
+                </div>
+            </span>
+        </div>
+
+        <div id="tela-eletrodomesticos" class="tela row row-cols-1 row-cols-md-3 g-4 collapse">
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Fogão', 'imagens/fogao.jpg', 'Eletrodomésticos', '850,00', 'Fogão com 4 bocas, perfeito para cozinhar.', '4.1', '600')">
+                <img src="imagens/fogao.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Fogão</h5>
+                    <p class="card-text"> R$ 850,00</p>
+                </div>
+
+            </span>
+
+            <span class="card h-100"
+                onclick="mostrarDetalhesProduto('Geladeira', 'imagens/geladeira.jpg', 'Eletrodomésticos', '5.500,00', 'Geladeira com duas portas, perfeita para armazenar alimentos.', '4.4', '1200')">
+                <img src="imagens/geladeira.jpg" class="card-img-top p-3" style="height: 250px; object-fit: contain">
+                <div class="card-body">
+                    <h5 class="card-title">Geladeira</h5>
+                    <p class="card-text"> R$ 5.500,00</p>
+
+                </div>
+            </span>
+        </div>
+
+        <div id="tela-contato" class="tela row row-cols-1 row-cols-md-3 g-4 collapse">
+            <div class="card shadow p-4">
+                <h2>Fale Conosco</h2>
+                <p><strong>Endereço:</strong> Rua Pedro Demoro, 123. Estreito</p>
+                <p><strong>Telefone:</strong> (48) 99999-9999</p>
+                <p><strong>Email:</strong> contato@floripashop.com</p>
+                <span class="btn btn-secondary mt-3" onclick="voltar()"> <- Voltar</span>
+
+            </div>
+
+            <footer class="container-fluid bg-dark text-light mt-5 py-4">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <!-- Informações -->
+                        <div class="col-md-6">
+
+                            <!-- Redes sociais -->
+                            <div class="d-flex gap-3">
+
+                                <a href="#" class="text-light fs-4" aria-label="Instagram">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+
+                                <a href="#" class="text-light fs-4" aria-label="Facebook">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+
+                                <a href="#" class="text-light fs-4" aria-label="WhatsApp">
+                                    <i class="bi bi-whatsapp"></i>
+                                </a>
+
+                                <a href="#" class="text-light fs-4" aria-label="YouTube">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center">
+                        <small>
+                            © 2026 Floripa's Shop. Todos os direitos reservados.
+                        </small>
+                    </div>
+
+                </div>
+
+            </footer>
+        </div>
+
+        <div id="tela-produto" class="tela collapse">
+
+            <button class="btn btn-secondary mb-3" onclick="voltar()"> <- Voltar</button>
+                    <div id="detalhes-produto" class="card shadow p-3">
+
+                    </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

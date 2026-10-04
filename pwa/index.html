@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minha Loja SPA WS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="manifest" href="manifest.json">
+
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+
+            <span class="navbar-brand" onclick="carregarPorCategoria('todos')">Floripa's Shop</span>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <li class="nav-item"><button class="nav-link"
+                            onclick="carregarPorCategoria('mens-shirts')"><strong>Vestuário</strong></button>
+                    </li>
+                    <li class="nav-item"><button class="nav-link"
+                            onclick="carregarPorCategoria('smartphones')"><strong>Eletrônicos/Smartphones</strong></button>
+                    </li>
+                    <li class="nav-item"><button class="nav-link"
+                            onclick="carregarPorCategoria('kitchen-accessories')"><strong>Acessórios/Cozinha</strong></button>
+                    </li>
+                    <li class="nav-item"><button class="nav-link" onclick="navegar('tela-contato')">Contato</button>
+                    </li>
+                    <li id="installAppBt" class="nav-item collapse">
+                        <hr />
+                        <a class="nav-link" href="#" onclick="installApp()" data-toggle="collapse"
+                            data-target="#menuNavbar">Instalar APP</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4 mt-5 p-4">
+        <h2 class="text-center mb-4">PWA Loja SPA com WebService</h2>
+
+        <div id="tela-home" class="tela row row-cols-1 row-cols-md-3 g-4 show">
+
+        </div>
+
+        <div id="tela-contato" class="tela row row-cols-1 row-cols-md-3 g-4 collapse">
+            <div class="card shadow p-4">
+                <h2>Fale Conosco</h2>
+                <p><strong>Endereço:</strong> Rua Pedro Demoro, 123. Estreito</p>
+                <p><strong>Telefone:</strong> (48) 99999-9999</p>
+                <p><strong>Email:</strong> contato@floripashop.com</p>
+                <span class="btn btn-secondary mt-3" onclick="voltar()"> <- Voltar</span>
+
+            </div>
+
+            <footer class="container-fluid bg-dark text-light mt-5 py-4">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <!-- Informações -->
+                        <div class="col-md-6">
+
+                            <!-- Redes sociais -->
+                            <div class="d-flex gap-3">
+
+                                <a href="#" class="text-light fs-4" aria-label="Instagram">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+
+                                <a href="#" class="text-light fs-4" aria-label="Facebook">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+
+                                <a href="#" class="text-light fs-4" aria-label="WhatsApp">
+                                    <i class="bi bi-whatsapp"></i>
+                                </a>
+
+                                <a href="#" class="text-light fs-4" aria-label="YouTube">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center">
+                        <small>
+                            © 2026 Floripa's Shop. Todos os direitos reservados.
+                        </small>
+                    </div>
+
+                </div>
+
+            </footer>
+        </div>
+
+        <div id="tela-produto" class="tela collapse">
+
+            <button class="btn btn-secondary mb-3" onclick="voltar()"> <- Voltar</button>
+                    <div id="detalhes-produto" class="card shadow p-3">
+
+                    </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
